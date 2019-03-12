@@ -11,5 +11,6 @@ spec:
   - port: 8088
     targetPort: 3000
   selector:
-    run: rest-jscreditscore
-  type: LoadBalancer
+    app: rest-jscreditscore
+    commit: ${WERCKER_GIT_COMMIT}
+  type: ClusterIP
