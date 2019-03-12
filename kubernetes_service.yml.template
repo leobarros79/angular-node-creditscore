@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rest-jscreditscore-svc
+  labels:
+    app: rest-jscreditscore
+    commit: ${WERCKER_GIT_COMMIT}  
 spec:
   selector:
     run: rest-jscreditscore
