@@ -21,14 +21,14 @@ spec:
         run: rest-jscreditscore
     spec:
       containers:
-      - image: iad.ocir.io/$WERCKER_APPLICATION_OWNER_NAME/$WERCKER_APPLICATION_NAME:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
+      - image: ${DOCKER_REPO}:${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         name: rest-jscreditscore
         ports:
         - containerPort: 3000
           protocol: TCP
       imagePullSecrets:
-      - name: wrelease
+      - name: ${OKE_IMAGESECRET}
       restartPolicy: Always
 ---
 apiVersion: v1
