@@ -13,4 +13,4 @@ spec:
   selector:
     app: rest-jscreditscore
     commit: ${WERCKER_GIT_COMMIT}
-  type: ClusterIP
+  type: LoadBalancer
