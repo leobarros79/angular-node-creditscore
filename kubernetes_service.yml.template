@@ -7,7 +7,8 @@ metadata:
     commit: ${WERCKER_GIT_COMMIT}  
 spec:
   selector:
-    run: rest-jscreditscore
+    app: rest-jscreditscore
+    commit: ${WERCKER_GIT_COMMIT} 
   ports:
     - port: 8088
       targetPort: 3000
